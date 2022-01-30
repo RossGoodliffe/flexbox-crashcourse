@@ -1,0 +1,122 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* End Reset */
+
+.main-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Spacing out examples and adding background */
+.container, .container-2, .container-3, .container-4, .container-5, .container-6 {
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+}
+/* Setting all item's as boxes */
+.item, .item-2, .item-3, .item-4, .item-5, .item-6 {
+    /* Used to termine the base of the element ex - will not go smaller than 100px */
+    flex-basis: 100px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+
+    /* Position content on the main axis */
+    justify-content: center;
+    /* Other options: space-around, space-between, center, end */
+
+    /* Position items on the cross axis */
+    align-items: end;
+    /* Other options: center, end, start */
+
+}
+
+/* align-self: */
+.item:nth-of-type(1) {
+    align-self: end;
+}
+.item:nth-of-type(2) {
+    align-self: center;
+}
+.item:nth-of-type(3) {
+    align-self: start;
+}
+
+.container-2 {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+.container-3 {
+    display: flex;
+}
+
+.item-3:nth-of-type(1) {
+    order: 2;
+}
+.item-3:nth-of-type(2) {
+    order: 3;
+}
+.item-3:nth-of-type(3) {
+    order: 1;
+}
+
+
+
+.container-4 {
+    display: flex;
+}
+
+/* flex-grow is based on the flex-basis */
+.item-4:nth-of-type(1) {
+    flex-grow: 1;
+}
+.item-4:nth-of-type(2) {
+    flex-grow: 2;
+
+}
+.item-4:nth-of-type(3) {
+    flex-grow: 1;
+}
+
+
+
+.container-5 {
+    display: flex;
+}
+
+.container-5 > div {
+    flex-basis: 400px;
+}
+
+/* flex-shrink is based on the flex-basis */
+.item-5:nth-of-type(1) {
+    flex-shrink: 1;
+}
+.item-5:nth-of-type(2) {
+    flex-shrink: 2;
+
+}
+.item-5:nth-of-type(3) {
+    flex-shrink: 3;
+}
